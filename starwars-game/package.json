@@ -1,11 +1,22 @@
 {
   "name": "starwars-game",
   "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start:api": "pm2 restart ../api/long-api/game-api/bin/www",
+
     "prestart": "npm run start:api",
     "start": "ng serve",
+    "poststart": "",
+
+    "prestart": "npm run start:api",
+    "start": "ng serve -o --port 4201",
+
+    "prehello": "echo 'pre hello ?'",
+    "hello": "echo 'hello'",
+    "posthello": "echo 'post hello ?'",
+
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
